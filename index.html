@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYOUT</title>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <h1>LAYOUT</h1>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Botón Encender/Apagar</title>
+        <style>
+            #miBoton {
+                width: 100px;
+                height: 50px;
+                background-color: gray;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 16px;
+                margin: 150px 50px;
+            }
+            #miBoton.encendido {
+                background-color: green;
+            }
+            #miBoton.apagado {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="miBoton" class="apagado">Apagar</button>
+    
+        <script>
+            const boton = document.getElementById('miBoton');
+    
+            boton.addEventListener('click', () => {
+                if (boton.classList.contains('apagado')) {
+                    boton.classList.remove('apagado');
+                    boton.classList.add('encendido');
+                    boton.textContent = 'A1';
+                } else {
+                    boton.classList.remove('encendido');
+                    boton.classList.add('apagado');
+                    boton.textContent = 'A1';
+                }
+            });
+        </script>
+    </body>
+    </html>
+    
+</head>
+<body>
+    
+</body>
+</html>
